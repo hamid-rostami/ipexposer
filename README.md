@@ -48,6 +48,8 @@ URL to findout the IP. After that, the IP is published to a topic like
 `ipexposer/HOSTNAME`, which hostname is hostname of your server.
 
 To lookup the ip, you can simply use a MQTT client like `mosquitto_sub`.
-Just subscribe to the topic and then you can see the IP. Because the
-script set `retain` flag of published message, you can see the latest
-IP even if the script is sopped at the moment.
+Just subscribe to the topic and then you can see the IP. Please note that
+if you're using mosquitto.org test broker, it may be a little slow because of its
+heavy load. The interesting point is because the script set `retain` flag of
+published message, you can see the latest IP even if the script is sopped
+at the moment.
